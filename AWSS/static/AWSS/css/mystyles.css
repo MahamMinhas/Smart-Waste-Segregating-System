@@ -1,0 +1,85 @@
+.error-contents{}
+.pricing-box{
+	padding: 30px 0px;
+}
+.pricing-box .card{
+	position: relative;
+	overflow: hidden;
+	box-shadow: 3px 5px 15px rgba(0,0,0, .15);
+	border: none;
+}
+.pricing-box .card h3.card-header{
+	padding: 80px 15px;
+	text-align: center;
+	background: #4e3914;
+	color: #ffffff;
+}
+.most_popular{
+	position: absolute;
+	top: 32px;
+	font-size: 12px;
+	text-align: center;
+	width: 181px;
+	padding: 4px 0;
+	right: -36px;
+	transform: rotate(40deg);
+	background-color: #4eae3a;
+	color: #4e3914;
+}
+.faq-main{
+	padding: 20px 15px;
+}
+.accordion-single .card-header h5 a{
+	font-size: 14px;
+}
+.faq-main{
+	padding: 30px 35px;
+	background: #4e3914;
+	margin: 30px 0px;
+}
+.accordion-single{
+	border-radius: 0px;
+	border: none;
+	border-bottom: 1px solid #e4e8ed;
+}
+.accordion-single .card-header{
+	background-color: transparent;
+	padding: 0px;
+	border: none;
+}
+.accordion-single .card-header h5 a{
+	color: #291c1c;
+	display: block;
+	position: relative;
+	padding: 21.28px 32px 26.56px 20px;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+.accordion-single .card-header h5 a:hover{
+	color: #4eae3a;
+	text-decoration: none;
+}
+.accordion-single h5 a[aria-expanded="false"]::before {
+    position: absolute;
+    content: "\f0dd";
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;	
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	color: #4e3914;
+}
+.accordion-single h5 a[aria-expanded="true"]::before{
+    position: absolute;
+    content: "\f0de";
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #52cc3a;
+}

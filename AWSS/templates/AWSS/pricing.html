@@ -1,0 +1,90 @@
+{% extends 'AWSS/base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="pricing-box">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h3 class="card-header">Residential Waste Sorting Service</h3>
+                    <div class="card-body">
+                        <div class="display-4">Rs. 1000</div>
+                        <div class="font-italic">per month</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Includes:</b></li>
+                        <li class="list-group-item">Garbage Pickup from your doorstep</li>
+                        <li class="list-group-item">Sorting out the solid waste into 2 categories</li>
+                        <li class="list-group-item">Dumping of the non-recyclable waste by the collecter vehicle </li>
+                        <li class="list-group-item">The recyclable materials sorted are transported to the recycling plants.</li>
+                        <li class="list-group-item">
+                        <a href="{% url 'bookings' %}" class="btn btn-primary">Sign Up!</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card card-outline-primary h-100">
+                    <h3 class="card-header text-white"> Industrial Waste Sorting Service </h3>
+                    <div class="card-body">
+                        <div class="display-4">Rs. 3500</div>
+                        <div class="font-italic">per month</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Includes: </b></li>
+                        <li class="list-group-item">Garbage Pickup</li>
+                        <li class="list-group-item">Sorting out the solid waste into 2 categories</li>
+                        <li class="list-group-item">Dumping of the non-recyclable waste by the collecter vehicle </li>
+                        <li class="list-group-item">The recyclable materials sorted are transported to the recycling plants.</li>
+                        <li class="list-group-item">
+                        <a href="{% url 'bookings' %}" class="btn btn-primary">Sign Up!</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h3 class="card-header">Commercical Waste Sorting Service</h3>
+                    <div class="card-body">
+                        <div class="display-4">Rs. 3500</div>
+                        <div class="font-italic">per month</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Includes: </b></li>
+                        <li class="list-group-item">Garbage Pickup & Cleaning of the public places like parks, malls</li>
+                        <li class="list-group-item">Sorting out the solid waste into 2 categories</li>
+                        <li class="list-group-item">Dumping of the non-recyclable waste by the collecter vehicle </li>
+                        <li class="list-group-item">The recyclable materials sorted are transported to the recycling plants.</li>
+                        <li class="list-group-item">
+                        <a href="{% url 'bookings' %}" class="btn btn-primary">Sign Up!</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h3 class="card-header">Dumpster Rental</h3>
+                    <div class="card-body">
+                        <div class="display-4">Rs. 500/day</div>
+                        <div class="font-italic">per month</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Includes: </b></li>
+                        <li class="list-group-item">Renting the categorized dumpster for your place</li>
+                        <li class="list-group-item">
+                        <a href="{% url 'bookings' %}" class="btn btn-primary">Sign Up!</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="alert alert-warning">
+    <h2>Note: </h2>
+<p>Prices are subject to change based on the location and the type of waste generated.</p>
+<p>The service garbage pickup is not exclusively available if the waste is not sorted. You have to select one of the available sorting service.</p>
+</div>
+{% endblock content %}

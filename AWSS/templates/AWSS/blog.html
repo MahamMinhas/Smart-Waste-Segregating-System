@@ -1,0 +1,35 @@
+{% extends 'AWSS/base.html' %}
+{% block content %}
+{% load static %}
+<hr>
+<h1 style="text-align: center;"> 
+  <b> Blog Posts </b>
+</h1>
+<section id="blog-posts" class="blog-posts section py-5">
+  <div class="container">
+    <div class="row gy-4">
+      {% for blog in blogs %}
+        <div class="col-lg-4 d-flex align-items-stretch">
+          <article class="blog-post card shadow-sm">
+            <div class="post-img">
+              <img src="{{ MEDIA_URL }}{{ blog.image }}" alt="{{ blog.title }}" class="card-img-top img-fluid">
+            </div>
+            <div class="card-body">
+
+              <h3 class="card-title">{{ blog.title }}</h3>
+              <div class="d-flex align-items-center mb-3">
+                <div>
+                  <p>{{ blog.content }}</p>
+                  <p class="mb-0">{{ blog.author }}</p>
+                  <small class="text-muted">{{ blog.date_published }}</small>
+                </div>
+              </div>
+              <a href="{{ blog.source_url }}" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

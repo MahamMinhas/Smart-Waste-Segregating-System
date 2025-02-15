@@ -1,0 +1,63 @@
+{% extends 'AWSS/base.html'%}
+{% block content %}
+{% load static %}
+         <!-- Visit Our Tailor Start -->
+         <div class="visit-tailor-area fix">
+            <!-- Right Contents -->
+         <div 
+            class="tailor-offers"
+            style="background-image: url('{{ MEDIA_URL }}{{ about.about_img }}')">
+         </div>
+    
+          <!-- Left Contents -->
+         <div class="tailor-details">
+            <span>{{ about.about_title }}</span>
+            <h2>{{ about.about_heading }}</h2>
+            <p>{{ about.about_text }}</p>
+    
+            <p class="pera-bottom">{{ settings.slider1_text }}</p>
+            <div class="footer-tittles">
+                <h2>{{ settings.system_name }}</h2>
+            </div>
+        </div>
+            </div>
+            <!-- Visit Our Tailor End -->
+         <!--? About Area Start -->
+         <section class="support-company-area fix pt-10">
+            <div class="support-wrapper align-items-center">
+                <div class="left-content">
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-30">
+                        <span>{{ whyjoin.title }}</span>
+                        <h2>{{ whyjoin.heading }}</h2>
+                    </div>
+                    <div class="support-caption">
+                      {% for sub_section in whyjoin_subsec %}
+                        <p class="pera-top"><b>{{sub_section.sub_heading }}</b> {{ sub_section.description }} <br> 
+                      {% endfor %}  
+                           <a href="#" class="border-btn">Join Us Now</a>
+                      
+                    </div>
+                </div>
+                <div class="right-content">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="{{MEDIA_URL}}{{whyjoin.image}}" alt="">
+                    </div>
+                    <div class="support-img-cap text-center d-flex">
+                        <div class="single-one">
+                            <span>{{whyjoin.number_1}}</span>
+                            <p>{{whyjoin.text_1}}</p>
+                        </div>
+                        <div class="single-two">
+                            <span>{{whyjoin.number_2}}</span>
+                            <p>{{whyjoin.text_2}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+    </main>
+{% endblock content %}
+    

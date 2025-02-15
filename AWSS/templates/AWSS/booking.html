@@ -1,0 +1,38 @@
+{% extends 'AWSS/base.html' %}
+{% block content %}
+{% load static %}
+<!--?  Booking Area start  -->
+<h2>Booking Form</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Booking Area End -->
+{% endblock content %}
+<script type="text/javascript">
+    function updatePrice() {
+        const serviceId = document.getElementById('id_service').value;
+        const priceDropdown = document.getElementById('id_price');
+
+        // Clear the price dropdown
+        priceDropdown.innerHTML = '<option value="">---------</option>';
+
+        if (serviceId) {
+            fetch(`/get-pricing-plans/${serviceId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    data.prices.forEach(price => {
+                        const option = document.createElement('option');
+                        option.value = price.id;
+                        option.text = price.title;
+                        priceDropdown.appendChild(option);
+                    });
+                });
+        }
+    }
+</script>
+
